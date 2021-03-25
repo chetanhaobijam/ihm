@@ -1,0 +1,12 @@
+/* Webfont: LeikoiMayekHU */@font-face {
+    font-family: 'LeikoiMayekHU';
+    src: url('LeikoiMayekHU.eot'); /* IE9 Compat Modes */
+    src: url('LeikoiMayekHU.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LeikoiMayekHU.woff') format('woff'), /* Modern Browsers */
+         url('LeikoiMayekHU.woff2') format('woff2'), /* Modern Browsers */
+         url('LeikoiMayekHU.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
