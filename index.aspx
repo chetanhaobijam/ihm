@@ -18,10 +18,10 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="icon">
-          <i class="fas fa-robot fa-2x"></i>
-      </div>  
-      <a class="navbar-brand" href="#">Innovation Hub Manipur</a>
+      <a class="navbar-brand d-flex flex-row align-items-center" href="#">
+          <i class="fas fa-robot icon"></i>
+          <span class="">Innovation Hub Manipur</span>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,10 +29,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-4">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="register.html">Register</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>
         </ul>
       </div>
