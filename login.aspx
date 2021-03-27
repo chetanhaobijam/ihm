@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>iHM Landing Page</title>
+    <title>iHM Login Page</title>
     <meta name="viewport" content="width= device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <link
@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="assets/styles.css" rel="stylesheet" />
+    <link href="assets/stylesForLogin.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -29,7 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-4">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link active" href="index.aspx">Home</a>
           </li>
             <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
@@ -47,13 +48,27 @@
       </div>
     </nav>
 
-    <main class="main">
-        <section class="mainSection d-flex flex-column text-center">
-            <div class="welcome">Welcome to the</div>
-            <h1 class="heading">Innovation Hub Manipur</h1>
-            <div class="mainLogo">iHM</div>
-            <div class="address">Manipur Information Technology Park, <br /> Imphal East, Manipur</div>
-        </section>
+    <main class="main d-flex justify-content-center">
+        <form action="#" method="post" runat="server" class="loginForm">
+            <h4 class="loginFormHeading">Login Form</h4>
+            <div class="formContainer">
+                <div class="form-group">
+                    <asp:Label ID="Lbl_User_ID" runat="server" Text="User ID" for="Txt_User_ID"></asp:Label>
+                    <asp:TextBox ID="Txt_User_ID" runat="server" name="Txt_User_ID" placedholder="Enter your user id here" class="form-control" required></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <asp:Label ID="Lbl_Password" runat="server" Text="Password" for="Txt_Password"></asp:Label>
+                    <input id="Txt_Password" type="password" minlength="8" required name="Txt_Password" class="form-control"/>
+                </div>
+                <div class="formButtons">
+                    <asp:Button ID="Btn_Submit" runat="server" Text="Login" class="btn btn-lg btn-success" type="submit"></asp:Button>
+                    <asp:Button ID="Btn_Cancel" runat="server" Text="Cancel" class="btn btn-lg btn-warning" type="reset"></asp:Button>
+                </div>
+                <div class="newRegister">
+                    <div>Register as new user</div>
+                </div>
+            </div>
+        </form>
     </main>
 
     <footer>&copy;2021. Innovation Hub, Manipur. All Rights Reserved</footer>

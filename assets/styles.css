@@ -15,6 +15,16 @@
     font-family: 'LeikoiMayekHU';
     margin: 0;
     padding: 0;
+    --blue1 : #01f0fb;
+    --blue2: #00c3cc;
+    --blue3: #008891;
+    --blue4: #007075;
+    --blue5: #005458;
+    --orange1: #ff7600;
+    --orange2: #f06f00;
+    --orange3: #c15900;
+    --orange4: #914300;
+    --grey: #ddd;
 }
 
 body {
@@ -25,7 +35,7 @@ body {
 }
 
 .navbar {
-    background: #11816b;
+    background: var(--blue4);
     position: fixed;
     width: 100%;
     padding: 0.5rem 0.3rem;
@@ -35,14 +45,6 @@ body {
     font-size: 1rem;
 }
 
-@media screen and (min-width: 425px) {
-    .navbar {
-        padding: 0.5rem 0.7rem;
-    }
-    .navbar-brand {
-        font-size: 1.25rem;
-    }
-}
 .icon {
     color: #fff;
     padding-right: 1rem;
@@ -59,19 +61,12 @@ body {
     margin-top: 0.5rem;
 }
 
-@media screen and (min-width: 567px) {
-    .navbar-nav {
-        text-align: start;
-        margin-top: auto;
-    }
-}
-
-.navbar-dark .navbar-nav .active > .nav-link {
-    margin: auto 1rem;
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 1.1rem;
     padding: 0.7rem 1rem;
 }
 
-.navbar-dark .navbar-nav .active>.nav-link:hover {
+.navbar-dark .navbar-nav .nav-link:hover {
     background-color: var(--danger);
 }
 
@@ -96,26 +91,9 @@ body {
 .heading {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--warning);
+    color: var(--orange3);
     font-family: Britannic Bold;
     margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 425px) {
-    .heading {
-        margin-bottom: 3rem;
-    }
-}
-
-@media screen and (min-width: 567px) {
-    .welcome {
-        font-size: 3rem;
-        margin: 5rem auto 2rem;
-    }
-    .heading {
-        font-size: 4.5rem;
-        margin-bottom: 1rem;
-    }
 }
 
 .mainLogo {
@@ -130,27 +108,59 @@ body {
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 425px) {
-    .address {
-        font-size: 1.3rem;
-        letter-spacing: 0.2rem;
-        margin-bottom: auto;
-    }
-}
-
 footer {
     padding: 0.5rem;
     text-align: center;
     color: #fff;
     font-weight: 400;
     font-size: 0.75rem;
-    background-color: #11816b;
+    background-color: var(--blue4);
 }
 
+/* Media Queries for Resposiveness*/
 @media screen and (min-width: 425px) {
+    .navbar {
+        padding: 0.5rem 0.7rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .heading {
+        margin-bottom: 3rem;
+    }
+
+    .address {
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: auto;
+    }
+
     footer {
         padding-top: 0.5rem;
         padding-bottom: 0;
         font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 567px) {
+    .navbar-nav {
+        text-align: start;
+        margin-top: auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .welcome {
+        font-size: 3rem;
+        margin: 5rem auto 2rem;
+    }
+    .heading {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+    }
+    footer {
+        padding-top: 1rem;
     }
 }
